@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: recbole
+Version: 1.2.0
+Summary: A unified, comprehensive and efficient recommendation library
+Home-page: https://github.com/RUCAIBox/RecBole
+Author: RecBoleTeam
+Author-email: recbole@outlook.com
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=1.10.0
+Requires-Dist: numpy>=1.17.2
+Requires-Dist: scipy>=1.6.0
+Requires-Dist: pandas>=1.0.5
+Requires-Dist: tqdm>=4.48.2
+Requires-Dist: colorlog==4.7.2
+Requires-Dist: colorama==0.4.4
+Requires-Dist: scikit_learn>=0.23.2
+Requires-Dist: pyyaml>=5.1.0
+Requires-Dist: tensorboard>=2.5.0
+Requires-Dist: thop>=0.1.1.post2207130030
+Requires-Dist: tabulate>=0.8.10
+Requires-Dist: plotly>=4.0.0
+Requires-Dist: texttable>=0.9.0
+Requires-Dist: psutil~=5.9.4
+Provides-Extra: hyperopt
+Requires-Dist: hyperopt==0.2.5; extra == "hyperopt"
+Provides-Extra: ray
+Requires-Dist: ray>=1.13.0; extra == "ray"
+
+RecBole is developed based on Python and PyTorch for reproducing and developing recommendation algorithms in a unified, comprehensive and efficient framework for research purpose. In the first version, our library includes 53 recommendation algorithms, covering four major categories: General Recommendation, Sequential Recommendation, Context-aware Recommendation and Knowledge-based Recommendation. View RecBole homepage for more information: https://recbole.io

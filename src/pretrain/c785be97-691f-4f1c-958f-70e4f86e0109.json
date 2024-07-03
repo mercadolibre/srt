@@ -1,0 +1,71 @@
+{
+  "model": "SASRecF2",
+  "dataset": "amazon-500K",
+  "load_col": {
+    "inter": [
+      "user_id",
+      "item_id",
+      "rating",
+      "timestamp"
+    ],
+    "item": [
+      "item_id",
+      "title",
+      "brand"
+    ]
+  },
+  "USER_ID_FIELD": "user_id",
+  "ITEM_ID_FIELD": "item_id",
+  "topk": 5,
+  "valid_metric": "mrr@5",
+  "mlflow": {
+    "enable": true,
+    "experiment_name": "fixed_brand",
+    "run_name": "run",
+    "tracking_uri": "sqlite:///mlruns.sqlite"
+  },
+  "selected_features": [
+    "title",
+    "brand"
+  ],
+  "hidden_dropout_prob": 0.5,
+  "attn_dropout_prob": 0.5,
+  "MAX_ITEM_LIST_LENGTH": 50,
+  "n_layers": 8,
+  "hidden_size": 128,
+  "inner_size": 128,
+  "learning_rate": 0.0001,
+  "weight_decay": 1e-05,
+  "max_grad_norm": 1.0,
+  "loss_type": "InfoNCE-quick",
+  "train_batch_size": 128,
+  "eval_batch_size": 128,
+  "epochs": 50,
+  "stopping_step": 10,
+  "eval_args": {
+    "split": {
+      "LS": "valid_and_test"
+    },
+    "order": "TO",
+    "group_by": "user",
+    "mode": {
+      "valid": "sampled10000",
+      "test": "sampled10000"
+    }
+  },
+  "scheduler": {
+    "type": "one-cycle"
+  },
+  "eval_step": 5,
+  "nce_temperature": 1,
+  "nce_label_smoothing": 0.0,
+  "save_dataset": true,
+  "normalize_embedding": false,
+  "evaluation_mode": "sampled10000",
+  "n_heads": 4,
+  "estimate_batch_size": false,
+  "nce_num_negatives": 300,
+  "nce_sampling_strategy": "popularity",
+  "nce_global_negatives": false,
+  "train_neg_sample_args": null
+}
