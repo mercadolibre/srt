@@ -1,4 +1,4 @@
-from src import fs
+from srt import fs
 
 here = fs.parent(__file__)
 data_dir = fs.ensure_exists(fs.abspath(fs.join(here, '../data')))

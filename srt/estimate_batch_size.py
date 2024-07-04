@@ -6,8 +6,8 @@ import torch
 from pynvml.smi import nvidia_smi
 
 from recbole.data.dataloader.general_dataloader import TrainDataLoader
-from src import fs
-from src.settings import RECBOLE_DIR
+from srt import fs
+from srt.settings import RECBOLE_DIR
 
 here = fs.parent(fs.abspath(__file__))
 properties_path = fs.join(RECBOLE_DIR, 'recbole/properties/model/')

@@ -3,7 +3,7 @@ import csv
 from concurrent.futures import ThreadPoolExecutor
 from random import Random
 
-from src import fs
+from srt import fs
 
 
 class iter_jl:

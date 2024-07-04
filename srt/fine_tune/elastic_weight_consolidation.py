@@ -2,7 +2,7 @@ from copy import deepcopy
 import torch
 from torch import nn
 
-from src.progress import progress
+from srt.progress import progress
 
 
 class EWCPenalty:

@@ -1,5 +1,5 @@
-from src import fs, settings
-from src.serialization import PartitionedIterable
+from srt import fs, settings
+from srt.serialization import PartitionedIterable
 from .scaled_datasets import create_recbole_dataset
 
 

@@ -1,0 +1,9 @@
+{
+  "method": "from_scratch",
+  "epochs": 50,
+  "n_layers": 2,
+  "hidden_size": 64,
+  "learning_rate": 1e-04,
+  "train_batch_size": 128,
+  "mlflow": {"experiment_name": "fine-tune"},
+}

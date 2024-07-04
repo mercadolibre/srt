@@ -5,12 +5,12 @@ from threading import Thread
 
 import requests
 
-from src import fs, settings
-from src.progress import progress
-from src.serialization import iter_jl
-from src.serialization.read import iter_csv
-from src.serialization.write import write_partitioned
-from src.time_it import timeit
+from srt import fs, settings
+from srt.progress import progress
+from srt.serialization import iter_jl
+from srt.serialization.read import iter_csv
+from srt.serialization.write import write_partitioned
+from srt.time_it import timeit
 
 
 def download_raw_files():

@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from datetime import datetime
 from time import time
 
-from src.progress import humanize_delta
+from srt.progress import humanize_delta
 
 
 class TimeObject(object):

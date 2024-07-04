@@ -6,10 +6,10 @@ from time import time
 
 import mmh3
 
-from src import fs  # , compute
-from src.progress import progress
-from src.serialization import compute
-from src.serialization.read import iter_fname, iter_round_robin_fnames, iter_jl_dir, chain_fnames
+from srt import fs  # , compute
+from srt.progress import progress
+from srt.serialization import compute
+from srt.serialization.read import iter_fname, iter_round_robin_fnames, iter_jl_dir, chain_fnames
 
 
 class SerializedIterable:

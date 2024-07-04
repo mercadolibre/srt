@@ -6,7 +6,7 @@ import tempfile
 
 import mmh3
 
-from src import fs
+from srt import fs
 
 
 class JlWriter:

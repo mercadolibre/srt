@@ -2,9 +2,9 @@ import csv
 import pickle as pkl
 from random import Random
 
-from src import fs, settings
-from src.progress import progress
-from src.serialization import PartitionedIterable
+from srt import fs, settings
+from srt.progress import progress
+from srt.serialization import PartitionedIterable
 from .post_process_ratings import _filter_user_set
 
 

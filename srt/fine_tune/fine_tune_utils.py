@@ -2,8 +2,8 @@ import json
 import logging
 import pickle as pkl
 
-from src.conf_utils import ConfigManager
-from src.fine_tune.elastic_weight_consolidation import EWCPenalty
+from srt.conf_utils import ConfigManager
+from srt.fine_tune.elastic_weight_consolidation import EWCPenalty
 
 logging.basicConfig(level=logging.INFO)
 
@@ -25,8 +25,8 @@ from recbole.utils import (
     set_color,
     get_environment,
 )
-from src import fs, settings
-from src.settings import RECBOLE_DIR
+from srt import fs, settings
+from srt.settings import RECBOLE_DIR
 
 here = fs.parent(fs.abspath(__file__))
 properties_path = fs.join(RECBOLE_DIR, 'recbole/properties/model/')

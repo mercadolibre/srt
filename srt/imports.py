@@ -1,6 +1,6 @@
-from src import fs
-from src.serialization import iter_jl, write_jl, iter_jl_dir, JlWriter, PartitionedIterable
-from src.progress import progress
+from srt import fs
+from srt.serialization import iter_jl, write_jl, iter_jl_dir, JlWriter, PartitionedIterable
+from srt.progress import progress
 from tqdm.notebook import tqdm
 import pandas as pd
 import numpy as np

@@ -2,10 +2,10 @@ import pickle as pkl
 from collections import Counter
 from itertools import chain
 
-from src import fs, settings
-from src.progress import progress
-from src.serialization import iter_jl, PartitionedIterable, JlWriter
-from src.time_it import timeit
+from srt import fs, settings
+from srt.progress import progress
+from srt.serialization import iter_jl, PartitionedIterable, JlWriter
+from srt.time_it import timeit
 
 
 def post_process_ratings():

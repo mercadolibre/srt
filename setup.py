@@ -5,8 +5,6 @@ VERSION = "1.0.0"
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-print(os.listdir(f'{here}/MyRecbole'))
-
 setup(
     name="Scalable Recommendations Transformer",
     version=VERSION,
@@ -16,7 +14,7 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["src"],
+    packages=["srt"],
     install_requires=[
     ],
     tests_require=[

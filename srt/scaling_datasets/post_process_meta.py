@@ -1,6 +1,6 @@
-from src import fs, settings
-from src.progress import progress
-from src.serialization import JlWriter, PartitionedIterable
+from srt import fs, settings
+from srt.progress import progress
+from srt.serialization import JlWriter, PartitionedIterable
 from .sentence_piece_tokenizer import SentencePieceTokenizer
 
 

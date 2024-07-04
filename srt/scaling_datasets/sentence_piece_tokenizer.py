@@ -2,7 +2,7 @@ import re
 
 import sentencepiece as spm
 
-from src import fs, settings
+from srt import fs, settings
 
 wp = re.compile('\w+')
 

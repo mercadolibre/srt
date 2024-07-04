@@ -5,10 +5,9 @@ from multiprocessing import Process
 
 from mlflow import MlflowClient
 
-from fine_tune_utils import adapt_model, fine_tune as fine_tune_model, from_scratch as train_model_from_scratch, \
+from srt.fine_tune.fine_tune_utils import adapt_model, fine_tune as fine_tune_model, from_scratch as train_model_from_scratch, \
     get_from_scratch_config_dict, fit_ewc
-from recbole.utils.mlflow_logger import get_or_create_experiment
-from src import fs
+from srt import fs
 
 here = fs.abspath(fs.parent(__file__))
 

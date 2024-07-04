@@ -26,9 +26,9 @@ from recbole.utils import (
     set_color,
     get_environment,
 )
-from src import fs, settings
-from src.estimate_batch_size import get_max_batch_size, update_batch_size, gc_cuda
-from src.settings import RECBOLE_DIR
+from srt import fs, settings
+from srt.estimate_batch_size import get_max_batch_size, update_batch_size, gc_cuda
+from srt.settings import RECBOLE_DIR
 
 here = fs.parent(fs.abspath(__file__))
 properties_path = fs.join(RECBOLE_DIR, 'recbole/properties/model/')

@@ -52,7 +52,7 @@ from recbole.utils import (
 from torch.nn.parallel import DistributedDataParallel
 
 from recbole.utils.mlflow_logger import MLFlowLogger
-from src.progress import progress
+from srt.progress import progress
 
 
 class AbstractTrainer(object):

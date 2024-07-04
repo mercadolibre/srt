@@ -3,7 +3,7 @@ from functools import wraps
 
 import urllib3
 
-from src.progress import progress
+from srt.progress import progress
 
 
 class boto_retry:

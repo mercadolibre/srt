@@ -2,8 +2,8 @@ import traceback
 from multiprocessing import Pool, cpu_count
 from pprint import pprint
 
-from src import fs
-from src.progress import progress
+from srt import fs
+from srt.progress import progress
 
 
 def process_files(in_dir, func, processes=-1, maxtasksperchild=1, desc=None, **common_kwargs):
