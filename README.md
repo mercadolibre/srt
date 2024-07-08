@@ -95,9 +95,15 @@ To summarize the changes are
 For comments, questions, or suggestions please contact [me](mailto:pablo.rzivic@mercadolibre.com). You can also reach me
 on twitter at [@ideasrapidas](https://twitter.com/ideasrapidas)
 
-## Citation
-TODO
+
+## Notice
+
+This project uses several dependencies as seen in requirements files. 
+The developers of this project are not responsible for any potential problems or vulnerabilities that may arise when using this code.
 
 ## License
 This project is licensed under the terms of the MIT License. See LICENSE.
+
+## Citation
+TODO
 
