@@ -97,3 +97,7 @@ on twitter at [@ideasrapidas](https://twitter.com/ideasrapidas)
 
 ## Citation
 TODO
+
+## License
+This project is licensed under the terms of the MIT License. See LICENSE.
+
