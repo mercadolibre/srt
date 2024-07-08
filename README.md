@@ -27,10 +27,10 @@ The pre-training script reads a configuration file and trains a model on the spe
 There are three configuration files on the `confs/pre_train` folder to pre-train on 100K samples, 1M samples, and 10M samples.
 
 ```commandline
-python scripts/pre_train.py -c <config_file>
+python scripts/pre_train.py -c <config_file> -o pretrain_checkpoint.pth
 ```
 
-The model will be written on **<TODO>**
+The model will be written on the file `pretrain_checkpoint.pth`
 
 ## Fine-tune a model
 
@@ -46,18 +46,27 @@ Also it can be any amazon dataset available on [Recbole](https://recbole.io/)
 To fine tune a pre-trained model run
 
 ```commandline
-python scripts/fine_tune.py -c <config_file> -s amazon-beauty -l $PRETRAIN_DATASET -i $CHECKPOINT_FNAME -p $PRETRAIN_CONFIG
+python scripts/fine_tune.py -c <config_file> -s amazon-beauty -l $PRETRAIN_DATASET -i $CHECKPOINT_FNAME 
+-p $PRETRAIN_CONFIG -o fine_tuned_checkpoint.pth
 ```
 
 This fine tunes a model pretrained on `$PRETRAIN_DATASET` (e.g. amazon-1M) with the checkpoint `$CHECKPOINT_FNAME` 
-(writen on the `saved` folder by `recbole`) and the configuration file `$PRETRAIN_CONFIG` (e.g. `confs/config_dict_1M.json`)
+and the configuration file `$PRETRAIN_CONFIG` (e.g. `confs/config_dict_1M.json`)
 
 ## Recbole fork
-There were some limitations on Recbole so we decide to fork it. To summarize the changes are
+There were some limitations on Recbole so we decide to fork it. We forked from the commit [`321bff8fc`](https://github.com/RUCAIBox/RecBole/commit/321bff8fc169415c908cd3e722d681b89bee5187) 
+To summarize the changes are
 
 1. Better implementation of negative sampling (to use only one forward pass instead of one for each negative sample)
 2. Evaluate NDCG both on train, valid and test to check for overfitting
-3. Log metrics into mlflow, which is more convenient to then analyze the results
-4. **TODO are there more?**
-5. 
+3. Log metrics into mlflow, which is more convenient to analyze the results
+4. Compute total parameters and non-embedding parameters
+5. Implement one cycle learning rate scheduler
+
+## Contact
+
+For comments, questions, or suggestions please contact [me](mailto:pablo.rzivic@mercadolibre.com). You can also reach me
+on twitter at [@ideasrapidas](https://twitter.com/ideasrapidas)
+
 ## Citation
+TODO
