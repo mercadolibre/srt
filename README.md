@@ -4,6 +4,18 @@ This repository contains the code for the paper "Scaling Sequential Recommendati
 published at The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval 
 (SIGIR 2024)
 
+
+## Contents
+
+1. [Installing](#installing)
+2. [Scaling Datasets](#scaling-datasets)
+3. [Pretrain a model](#pretrain-a-model)
+4. [Use MLFLOW server to check metrics](#use-mlflow-server-to-check-metrics) 
+5. [Fine-tune a model](#fine-tune-a-model)
+6. [Recbole fork](#recbole-fork)
+7. [Contact](#contact)
+8. [Citation](#citation)
+
 ## Installing
 
 To install the required packages you need to use either `requirements_cpu.txt` if you are installing on a CPU 
