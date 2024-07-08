@@ -34,13 +34,13 @@ here = fs.parent(fs.abspath(__file__))
 properties_path = fs.join(RECBOLE_DIR, 'recbole/properties/model/')
 
 
-def main(config_dict_fname):
+def main(config_dict_fname, out_fname):
     with open(config_dict_fname) as f:
         config_dict = json.load(f)
 
     # make sure recbole finds our datasets
     config_dict['data_path'] = settings.RECBOLE_DATASETS
-    run_experiment(config_dict['model'], config_dict['dataset'], config_dict)
+    run_experiment(config_dict['model'], config_dict['dataset'], config_dict, out_fname)
 
 
 class M(nn.Module):
@@ -66,7 +66,7 @@ def compute_flops(batch, model):
     )
 
 
-def run_experiment(model, dataset, config_dict):
+def run_experiment(model, dataset, config_dict, out_fname):
     config_file_list = [fs.join(properties_path, model + '.yaml')]
     # configurations initialization
     config = Config(
@@ -113,6 +113,7 @@ def run_experiment(model, dataset, config_dict):
         config['mlflow']['enable'] = True
 
     trainer = get_trainer(config["MODEL_TYPE"], config["model"])(config, model)
+    trainer.saved_model_file = out_fname
 
     transform = construct_transform(config)
 
@@ -153,7 +154,8 @@ def run_experiment(model, dataset, config_dict):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--config-dict', help='config dict json file', required=True, default='config_dict.json')
+    parser.add_argument('-o', '--out-fname', help='output checkpoint fname', required=True)
 
     args = parser.parse_args()
 
-    main(args.config_dict)
+    main(args.config_dict, args.out_fname)

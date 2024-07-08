@@ -20,6 +20,8 @@ def main():
     parser.add_argument('-s', '--small-dt-name', help='dataset name to train on',
                         required=True, default='amazon-beauty')
 
+    parser.add_argument('-o', '--out-fname', help='output model fname', required=True)
+
     parser.add_argument('-l', '--large-dt-name', help='dataset used to train the model to be fine-tuned',
                         required=False)
 
@@ -37,10 +39,16 @@ def main():
         if args.large_dt_name is None or args.initial_checkpoint is None or args.pre_train_config_dict is None:
             raise ValueError('Need to provide large_dt_name, initial_checkpoint and pre_train_config_dict')
 
-    main_internal(args.small_dt_name, fine_tune_config, args.large_dt_name, args.pre_train_config_dict, args.initial_checkpoint)
+    working_dir = main_internal(
+        args.small_dt_name, fine_tune_config, args.large_dt_name, args.out_fname,
+        args.pre_train_config_dict, args.initial_checkpoint,
+    )
+
+    print(f'Fine-tuning done. All checkpoints saved at {working_dir}')
+    print(f'Final checkpoint saved at {args.out_fname}')
 
 
-def main_internal(small_dt_name, fine_tune_config, large_dt_name,
+def main_internal(small_dt_name, fine_tune_config, large_dt_name, out_fname,
                   pretrain_config_dict_fname=None, starting_checkpoint_fname=None):
     """
     pretrain_config_dict_fname is the config_dict used to obtain the starting_checkpoint_fname
@@ -73,7 +81,7 @@ def main_internal(small_dt_name, fine_tune_config, large_dt_name,
 
     run_name = fine_tune_config['run_name'] = str(uuid.uuid4())
     working_dir = fine_tune_config['working_dir'] = fs.ensure_exists(fs.abspath(fs.join('working_dir', run_name)))
-    fine_tune_config['out_fname'] = fs.join(working_dir, 'final.pth')
+    internal_checkpoint = fine_tune_config['out_fname'] = fs.join(working_dir, 'final.pth')
 
     fine_tune_config = run(fine_tune_config) or fine_tune_config
 
@@ -105,6 +113,9 @@ def main_internal(small_dt_name, fine_tune_config, large_dt_name,
 
     for k, v in extra_params.items():
         mlflow_client.log_param(run_id, k, v)
+
+    fs.copy(internal_checkpoint, out_fname)
+    return working_dir
 
 
 def run(fine_tune_config):

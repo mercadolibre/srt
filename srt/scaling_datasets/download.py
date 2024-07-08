@@ -84,6 +84,7 @@ def _reduce_metadata_fields(it):
 
 
 def download_file_in_background(url, fname, binary=False, chunk_size=20*1024*1024):
+    print(f'downloading {url} into {fs.name(fname)}')
     t = Process(target=download_file, args=(url, fname, binary, chunk_size))
     t.start()
     return t
