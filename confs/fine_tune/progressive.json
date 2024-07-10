@@ -1,0 +1,10 @@
+{
+  "method": "progressive",
+  "epochs_per_layer": 10,
+  "learning_rate": 1e-04,
+  "train_batch_size": 128,
+  "mlflow": {"experiment_name": "fine-tune"},
+  "ewc_lambda": 100,
+  "freeze_embeddings": true,
+  "final_epochs": 50
+}
