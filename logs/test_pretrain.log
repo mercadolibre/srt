@@ -1,0 +1,292 @@
+INFO:datadog.api:No agent or invalid configuration file found
+WARNING:root:command line args [-c confs/pre_train/config_dict_100K.json -o test.pth] will not be used in RecBole
+INFO:faiss.loader:Loading faiss with AVX2 support.
+INFO:faiss.loader:Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+INFO:faiss.loader:Loading faiss.
+INFO:faiss.loader:Successfully loaded faiss.
+INFO:root:['scripts/pre_train.py', '-c', 'confs/pre_train/config_dict_100K.json', '-o', 'test.pth']
+INFO:root:
+[1;35mGeneral Hyper Parameters:
+[0m[1;36mgpu_id[0m =[1;33m 0[0m
+[1;36muse_gpu[0m =[1;33m True[0m
+[1;36mseed[0m =[1;33m 2020[0m
+[1;36mstate[0m =[1;33m INFO[0m
+[1;36mreproducibility[0m =[1;33m True[0m
+[1;36mdata_path[0m =[1;33m /alloc/data/srt/data/output/amazon-100K[0m
+[1;36mcheckpoint_dir[0m =[1;33m saved[0m
+[1;36mshow_progress[0m =[1;33m True[0m
+[1;36msave_dataset[0m =[1;33m False[0m
+[1;36mdataset_save_path[0m =[1;33m None[0m
+[1;36msave_dataloaders[0m =[1;33m False[0m
+[1;36mdataloaders_save_path[0m =[1;33m None[0m
+[1;36mlog_wandb[0m =[1;33m False[0m
+
+[1;35mTraining Hyper Parameters:
+[0m[1;36mepochs[0m =[1;33m 2[0m
+[1;36mtrain_batch_size[0m =[1;33m 128[0m
+[1;36mlearner[0m =[1;33m adam[0m
+[1;36mlearning_rate[0m =[1;33m 0.0001[0m
+[1;36mtrain_neg_sample_args[0m =[1;33m {'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}[0m
+[1;36meval_step[0m =[1;33m 1[0m
+[1;36mstopping_step[0m =[1;33m 20[0m
+[1;36mclip_grad_norm[0m =[1;33m None[0m
+[1;36mweight_decay[0m =[1;33m 1e-05[0m
+[1;36mloss_decimal_place[0m =[1;33m 4[0m
+
+[1;35mEvaluation Hyper Parameters:
+[0m[1;36meval_args[0m =[1;33m {'split': {'LS': 'valid_and_test'}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'sampled10000', 'test': 'sampled10000', 'train': 'sampled10000'}}[0m
+[1;36mrepeatable[0m =[1;33m True[0m
+[1;36mmetrics[0m =[1;33m ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision'][0m
+[1;36mtopk[0m =[1;33m [5][0m
+[1;36mvalid_metric[0m =[1;33m mrr@5[0m
+[1;36mvalid_metric_bigger[0m =[1;33m True[0m
+[1;36meval_batch_size[0m =[1;33m 128[0m
+[1;36mmetric_decimal_place[0m =[1;33m 4[0m
+
+[1;35mDataset Hyper Parameters:
+[0m[1;36mfield_separator[0m =[1;33m 	[0m
+[1;36mseq_separator[0m =[1;33m  [0m
+[1;36mUSER_ID_FIELD[0m =[1;33m user_id[0m
+[1;36mITEM_ID_FIELD[0m =[1;33m item_id[0m
+[1;36mRATING_FIELD[0m =[1;33m rating[0m
+[1;36mTIME_FIELD[0m =[1;33m timestamp[0m
+[1;36mseq_len[0m =[1;33m None[0m
+[1;36mLABEL_FIELD[0m =[1;33m label[0m
+[1;36mthreshold[0m =[1;33m None[0m
+[1;36mNEG_PREFIX[0m =[1;33m neg_[0m
+[1;36mload_col[0m =[1;33m {'inter': ['user_id', 'item_id', 'rating', 'timestamp'], 'item': ['item_id', 'title', 'brand']}[0m
+[1;36munload_col[0m =[1;33m None[0m
+[1;36munused_col[0m =[1;33m None[0m
+[1;36madditional_feat_suffix[0m =[1;33m None[0m
+[1;36mrm_dup_inter[0m =[1;33m None[0m
+[1;36mval_interval[0m =[1;33m None[0m
+[1;36mfilter_inter_by_user_or_item[0m =[1;33m True[0m
+[1;36muser_inter_num_interval[0m =[1;33m [0,inf)[0m
+[1;36mitem_inter_num_interval[0m =[1;33m [0,inf)[0m
+[1;36malias_of_user_id[0m =[1;33m None[0m
+[1;36malias_of_item_id[0m =[1;33m None[0m
+[1;36malias_of_entity_id[0m =[1;33m None[0m
+[1;36malias_of_relation_id[0m =[1;33m None[0m
+[1;36mpreload_weight[0m =[1;33m None[0m
+[1;36mnormalize_field[0m =[1;33m None[0m
+[1;36mnormalize_all[0m =[1;33m None[0m
+[1;36mITEM_LIST_LENGTH_FIELD[0m =[1;33m item_length[0m
+[1;36mLIST_SUFFIX[0m =[1;33m _list[0m
+[1;36mMAX_ITEM_LIST_LENGTH[0m =[1;33m 50[0m
+[1;36mPOSITION_FIELD[0m =[1;33m position_id[0m
+[1;36mHEAD_ENTITY_ID_FIELD[0m =[1;33m head_id[0m
+[1;36mTAIL_ENTITY_ID_FIELD[0m =[1;33m tail_id[0m
+[1;36mRELATION_ID_FIELD[0m =[1;33m relation_id[0m
+[1;36mENTITY_ID_FIELD[0m =[1;33m entity_id[0m
+[1;36mbenchmark_filename[0m =[1;33m None[0m
+
+[1;35mOther Hyper Parameters: 
+[0m[1;36mworker[0m = [1;33m0[0m
+[1;36mwandb_project[0m = [1;33mrecbole[0m
+[1;36mshuffle[0m = [1;33mTrue[0m
+[1;36mrequire_pow[0m = [1;33mFalse[0m
+[1;36menable_amp[0m = [1;33mFalse[0m
+[1;36menable_scaler[0m = [1;33mFalse[0m
+[1;36mtransform[0m = [1;33mNone[0m
+[1;36mn_layers[0m = [1;33m16[0m
+[1;36mn_heads[0m = [1;33m4[0m
+[1;36mhidden_size[0m = [1;33m256[0m
+[1;36minner_size[0m = [1;33m256[0m
+[1;36mhidden_dropout_prob[0m = [1;33m0.5[0m
+[1;36mattn_dropout_prob[0m = [1;33m0.5[0m
+[1;36mhidden_act[0m = [1;33mgelu[0m
+[1;36mlayer_norm_eps[0m = [1;33m1e-12[0m
+[1;36minitializer_range[0m = [1;33m0.02[0m
+[1;36mselected_features[0m = [1;33m['title', 'brand'][0m
+[1;36mpooling_mode[0m = [1;33msum[0m
+[1;36mloss_type[0m = [1;33mInfoNCE-quick[0m
+[1;36mnumerical_features[0m = [1;33m[][0m
+[1;36mdiscretization[0m = [1;33mNone[0m
+[1;36mkg_reverse_r[0m = [1;33mFalse[0m
+[1;36mentity_kg_num_interval[0m = [1;33m[0,inf)[0m
+[1;36mrelation_kg_num_interval[0m = [1;33m[0,inf)[0m
+[1;36mMODEL_TYPE[0m = [1;33mModelType.SEQUENTIAL[0m
+[1;36mmlflow[0m = [1;33m{'enable': True, 'experiment_name': 'exp', 'run_name': 'run', 'tracking_uri': 'sqlite:///mlruns.sqlite'}[0m
+[1;36mmax_grad_norm[0m = [1;33m1.0[0m
+[1;36mscheduler[0m = [1;33m{'type': 'one-cycle'}[0m
+[1;36mnce_temperature[0m = [1;33m1[0m
+[1;36mnce_label_smoothing[0m = [1;33m0.0[0m
+[1;36mnormalize_embedding[0m = [1;33mFalse[0m
+[1;36mevaluation_mode[0m = [1;33msampled50000[0m
+[1;36mestimate_batch_size[0m = [1;33mFalse[0m
+[1;36mnce_num_negatives[0m = [1;33m300[0m
+[1;36mnce_sampling_strategy[0m = [1;33mpopularity[0m
+[1;36mnce_global_negatives[0m = [1;33mFalse[0m
+[1;36meval_type[0m = [1;33mEvaluatorType.RANKING[0m
+[1;36msingle_spec[0m = [1;33mTrue[0m
+[1;36mlocal_rank[0m = [1;33m0[0m
+[1;36mdevice[0m = [1;33mcuda[0m
+[1;36mvalid_neg_sample_args[0m = [1;33m{'distribution': 'none', 'sample_num': 'none'}[0m
+[1;36mtest_neg_sample_args[0m = [1;33m{'distribution': 'none', 'sample_num': 'none'}[0m
+
+
+INFO:root:[1;35mamazon-100K[0m
+[1;34mThe number of users[0m: 6214
+[1;34mAverage actions of users[0m: 15.98776758409786
+[1;34mThe number of items[0m: 86541
+[1;34mAverage actions of items[0m: 1.1478160388259764
+[1;34mThe number of inters[0m: 99332
+[1;34mThe sparsity of the dataset[0m: 99.98152876125582%
+[1;34mRemain Fields[0m: ['user_id', 'item_id', 'rating', 'timestamp', 'title', 'brand']
+INFO:root:[1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[128][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+INFO:root:[1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'LS': 'valid_and_test'}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'sampled10000', 'test': 'sampled10000', 'train': 'sampled10000'}}][0m
+INFO:root:SASRecF2(
+  (position_embedding): Embedding(50, 256)
+  (feature_embed_layer): FeatureSeqEmbLayer(
+    (token_embedding_table): ModuleDict()
+    (float_embedding_table): ModuleDict()
+    (token_seq_embedding_table): ModuleDict(
+      (item): ModuleList(
+        (0): Embedding(26724, 256)
+        (1): Embedding(17260, 256)
+      )
+    )
+    (float_seq_embedding_table): ModuleDict(
+      (item): ModuleList()
+    )
+  )
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-15): 16 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=256, out_features=256, bias=True)
+          (key): Linear(in_features=256, out_features=256, bias=True)
+          (value): Linear(in_features=256, out_features=256, bias=True)
+          (softmax): Softmax(dim=-1)
+          (attn_dropout): Dropout(p=0.5, inplace=False)
+          (dense): Linear(in_features=256, out_features=256, bias=True)
+          (LayerNorm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.5, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=256, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=256, bias=True)
+          (LayerNorm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (adapter_layer): Linear(in_features=512, out_features=256, bias=True)
+  (LayerNorm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.5, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+)[1;34m
+Trainable parameters[0m: 17736960
+INFO:alembic.runtime.migration:Context impl SQLiteImpl.
+INFO:alembic.runtime.migration:Will assume non-transactional DDL.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+INFO:root:[1;34mforward_flops[0m: 41381478400.0
+INFO:root:[1;34mthop_params[0m: 6464256.0
+INFO:root:[1;34mtotal_flops[0m: 46431420416.0
+2024-07-08 11:54:26 pid 6149 | starting to iterate Train     0 (total=631), updating every 1 seconds
+2024-07-08 11:54:28 pid 6149 | 4 of 631, 0.6% of Train     0, speed: 2.45 it/s, elapsed 0.41 seconds, eta 4.27 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.77618
+2024-07-08 11:54:29 pid 6149 | 7 of 631, 1.1% of Train     0, speed: 2.45 it/s, elapsed 1.64 seconds, eta 4.25 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68627
+2024-07-08 11:54:30 pid 6149 | 10 of 631, 1.6% of Train     0, speed: 2.45 it/s, elapsed 2.85 seconds, eta 4.22 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68281
+2024-07-08 11:54:31 pid 6149 | 13 of 631, 2.1% of Train     0, speed: 2.46 it/s, elapsed 4.07 seconds, eta 4.19 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68639
+2024-07-08 11:54:32 pid 6149 | 16 of 631, 2.5% of Train     0, speed: 2.46 it/s, elapsed 5.29 seconds, eta 4.17 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.69053
+2024-07-08 11:54:34 pid 6149 | 19 of 631, 3.0% of Train     0, speed: 2.45 it/s, elapsed 6.52 seconds, eta 4.16 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.69607
+2024-07-08 11:54:35 pid 6149 | 22 of 631, 3.5% of Train     0, speed: 2.46 it/s, elapsed 7.74 seconds, eta 4.13 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.69352
+2024-07-08 11:54:36 pid 6149 | 25 of 631, 4.0% of Train     0, speed: 2.45 it/s, elapsed 8.97 seconds, eta 4.12 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68387
+2024-07-08 11:54:37 pid 6149 | print interval is now 5s
+2024-07-08 11:54:37 pid 6149 | 28 of 631, 4.4% of Train     0, speed: 2.45 it/s, elapsed 10.20 seconds, eta 4.10 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.67560
+2024-07-08 11:54:43 pid 6149 | 41 of 631, 6.5% of Train     0, speed: 2.45 it/s, elapsed 15.50 seconds, eta 4 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68545
+2024-07-08 11:54:48 pid 6149 | 54 of 631, 8.6% of Train     0, speed: 2.45 it/s, elapsed 20.84 seconds, eta 3.93 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.68560
+2024-07-08 11:54:53 pid 6149 | 67 of 631, 10.6% of Train     0, speed: 2.45 it/s, elapsed 26.16 seconds, eta 3.84 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.67226
+2024-07-08 11:54:57 pid 6149 | print interval is now 30s
+2024-07-08 11:55:23 pid 6149 | 140 of 631, 22.2% of Train     0, speed: 2.43 it/s, elapsed 56.35 seconds, eta 3.37 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.64375
+2024-07-08 11:55:54 pid 6149 | 213 of 631, 33.8% of Train     0, speed: 2.42 it/s, elapsed 1.44 minutes, eta 2.87 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.61386
+2024-07-08 11:56:24 pid 6149 | 286 of 631, 45.3% of Train     0, speed: 2.42 it/s, elapsed 1.95 minutes, eta 2.37 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.59500
+2024-07-08 11:56:54 pid 6149 | 359 of 631, 56.9% of Train     0, speed: 2.42 it/s, elapsed 2.45 minutes, eta 1.87 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.57787
+2024-07-08 11:57:24 pid 6149 | 432 of 631, 68.5% of Train     0, speed: 2.42 it/s, elapsed 2.95 minutes, eta 1.37 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.56209
+2024-07-08 11:57:55 pid 6149 | 505 of 631, 80.0% of Train     0, speed: 2.42 it/s, elapsed 3.46 minutes, eta 52.07 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.54561
+2024-07-08 11:58:25 pid 6149 | 578 of 631, 91.6% of Train     0, speed: 2.42 it/s, elapsed 3.96 minutes, eta 21.90 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.53263
+2024-07-08 11:58:47 pid 6149 | 631 of 631, 100.0% of Train     0, speed: 2.42 it/s, elapsed 4.34 minutes, eta 0 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.52225
+2024-07-08 11:58:47 pid 6149 | finished Train     0. Total time: 4.34 minutes
+INFO:root:[1;32mepoch 0 training[0m [[1;34mtime[0m: 261.09s, [1;34mtrain loss[0m: 5.5223]
+2024-07-08 11:58:47 pid 6149 | starting to iterate Evaluate in valid    (total=49), updating every 1 seconds
+2024-07-08 11:58:48 pid 6149 | 12 of 49, 24.5% of Evaluate in valid   , speed: 15.29 it/s, elapsed 0.59 seconds, eta 2.42 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 11:58:49 pid 6149 | 28 of 49, 57.1% of Evaluate in valid   , speed: 15.23 it/s, elapsed 1.64 seconds, eta 1.38 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 11:58:50 pid 6149 | 44 of 49, 89.8% of Evaluate in valid   , speed: 15.20 it/s, elapsed 2.70 seconds, eta 0.33 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 11:58:50 pid 6149 | 49 of 49, 100.0% of Evaluate in valid   , speed: 15.19 it/s, elapsed 3.08 seconds, eta 0 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 11:58:50 pid 6149 | finished Evaluate in valid   . Total time: 3.08 seconds
+valid evaluation
+OrderedDict([('recall@5', 0.0521), ('mrr@5', 0.038), ('ndcg@5', 0.0415), ('hit@5', 0.0521), ('precision@5', 0.0104), ('valid_loss', 4.869768551417759)])
+INFO:root:[1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 3.31s, [1;34mvalid_score[0m: 0.038000]
+INFO:root:[1;34mvalid result[0m: 
+recall@5 : 0.0521    mrr@5 : 0.038    ndcg@5 : 0.0415    hit@5 : 0.0521    precision@5 : 0.0104    valid_loss : 4.869768551417759
+2024-07-08 11:58:51 pid 6149 | starting to iterate Evaluate in train    (total=631), updating every 1 seconds
+2024-07-08 11:58:52 pid 6149 | 47 of 631, 7.4% of Evaluate in train   , speed: 35.94 it/s, elapsed 1.22 seconds, eta 16.25 seconds, GPU RAM: 5.54 G/15.78 G
+train evaluation
+OrderedDict([('recall@5', 0.062), ('mrr@5', 0.0424), ('ndcg@5', 0.0473), ('hit@5', 0.062), ('precision@5', 0.0124)])
+INFO:root:[1;34mSaving current[0m: test.pth
+2024-07-08 11:58:56 pid 6149 | starting to iterate Train     1 (total=631), updating every 1 seconds
+2024-07-08 11:58:58 pid 6149 | 5 of 631, 0.8% of Train     1, speed: 2.46 it/s, elapsed 0.81 seconds, eta 4.24 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.20941
+2024-07-08 11:58:59 pid 6149 | 8 of 631, 1.3% of Train     1, speed: 2.46 it/s, elapsed 2.03 seconds, eta 4.22 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.23103
+2024-07-08 11:59:00 pid 6149 | 11 of 631, 1.7% of Train     1, speed: 2.44 it/s, elapsed 3.27 seconds, eta 4.23 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.21443
+2024-07-08 11:59:02 pid 6149 | 14 of 631, 2.2% of Train     1, speed: 2.44 it/s, elapsed 4.51 seconds, eta 4.22 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.22805
+2024-07-08 11:59:03 pid 6149 | 17 of 631, 2.7% of Train     1, speed: 2.44 it/s, elapsed 5.74 seconds, eta 4.20 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.20958
+2024-07-08 11:59:04 pid 6149 | 20 of 631, 3.2% of Train     1, speed: 2.44 it/s, elapsed 6.96 seconds, eta 4.17 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.20762
+2024-07-08 11:59:05 pid 6149 | 23 of 631, 3.6% of Train     1, speed: 2.44 it/s, elapsed 8.20 seconds, eta 4.15 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.20396
+2024-07-08 11:59:06 pid 6149 | 26 of 631, 4.1% of Train     1, speed: 2.43 it/s, elapsed 9.47 seconds, eta 4.15 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.20228
+2024-07-08 11:59:07 pid 6149 | print interval is now 5s
+2024-07-08 11:59:12 pid 6149 | 36 of 631, 5.7% of Train     1, speed: 2.20 it/s, elapsed 15 seconds, eta 4.51 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.19421
+2024-07-08 11:59:17 pid 6149 | 49 of 631, 7.8% of Train     1, speed: 2.26 it/s, elapsed 20.34 seconds, eta 4.29 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.17997
+2024-07-08 11:59:22 pid 6149 | 61 of 631, 9.7% of Train     1, speed: 2.28 it/s, elapsed 25.42 seconds, eta 4.16 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.17302
+2024-07-08 11:59:27 pid 6149 | print interval is now 30s
+2024-07-08 11:59:52 pid 6149 | 134 of 631, 21.2% of Train     1, speed: 2.36 it/s, elapsed 55.47 seconds, eta 3.51 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.16083
+2024-07-08 12:00:23 pid 6149 | 206 of 631, 32.6% of Train     1, speed: 2.37 it/s, elapsed 1.43 minutes, eta 3 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.15441
+2024-07-08 12:00:53 pid 6149 | 279 of 631, 44.2% of Train     1, speed: 2.39 it/s, elapsed 1.93 minutes, eta 2.46 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.14417
+2024-07-08 12:01:23 pid 6149 | 352 of 631, 55.8% of Train     1, speed: 2.40 it/s, elapsed 2.43 minutes, eta 1.94 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.13772
+2024-07-08 12:01:53 pid 6149 | 425 of 631, 67.4% of Train     1, speed: 2.40 it/s, elapsed 2.93 minutes, eta 1.43 minutes, GPU RAM: 5.54 G/15.78 G loss: 5.13064
+2024-07-08 12:02:23 pid 6149 | 499 of 631, 79.1% of Train     1, speed: 2.41 it/s, elapsed 3.44 minutes, eta 54.88 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.12376
+2024-07-08 12:02:53 pid 6149 | 572 of 631, 90.6% of Train     1, speed: 2.41 it/s, elapsed 3.94 minutes, eta 24.50 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.11812
+2024-07-08 12:03:19 pid 6149 | 631 of 631, 100.0% of Train     1, speed: 2.40 it/s, elapsed 4.37 minutes, eta 0 seconds, GPU RAM: 5.54 G/15.78 G loss: 5.11238
+2024-07-08 12:03:19 pid 6149 | finished Train     1. Total time: 4.37 minutes
+INFO:root:[1;32mepoch 1 training[0m [[1;34mtime[0m: 263.19s, [1;34mtrain loss[0m: 5.1124]
+2024-07-08 12:03:19 pid 6149 | starting to iterate Evaluate in valid    (total=49), updating every 1 seconds
+2024-07-08 12:03:20 pid 6149 | 16 of 49, 32.7% of Evaluate in valid   , speed: 15.31 it/s, elapsed 0.85 seconds, eta 2.16 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:21 pid 6149 | 32 of 49, 65.3% of Evaluate in valid   , speed: 15.29 it/s, elapsed 1.90 seconds, eta 1.11 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:22 pid 6149 | 48 of 49, 98.0% of Evaluate in valid   , speed: 15.29 it/s, elapsed 2.94 seconds, eta 0.07 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:23 pid 6149 | 49 of 49, 100.0% of Evaluate in valid   , speed: 15.29 it/s, elapsed 3.06 seconds, eta 0 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:23 pid 6149 | finished Evaluate in valid   . Total time: 3.06 seconds
+valid evaluation
+OrderedDict([('recall@5', 0.0563), ('mrr@5', 0.0401), ('ndcg@5', 0.0441), ('hit@5', 0.0563), ('precision@5', 0.0113), ('valid_loss', 4.807887145451137)])
+INFO:root:[1;32mepoch 1 evaluating[0m [[1;34mtime[0m: 3.28s, [1;34mvalid_score[0m: 0.040100]
+INFO:root:[1;34mvalid result[0m: 
+recall@5 : 0.0563    mrr@5 : 0.0401    ndcg@5 : 0.0441    hit@5 : 0.0563    precision@5 : 0.0113    valid_loss : 4.807887145451137
+2024-07-08 12:03:23 pid 6149 | starting to iterate Evaluate in train    (total=631), updating every 1 seconds
+train evaluation
+OrderedDict([('recall@5', 0.0781), ('mrr@5', 0.0571), ('ndcg@5', 0.0624), ('hit@5', 0.0781), ('precision@5', 0.0156)])
+INFO:root:[1;34mSaving current[0m: test.pth
+INFO:root:Loading model structure and parameters from test.pth
+2024-07-08 12:03:29 pid 6149 | starting to iterate Evaluate in test    (total=49), updating every 1 seconds
+2024-07-08 12:03:30 pid 6149 | 17 of 49, 34.7% of Evaluate in test   , speed: 15.05 it/s, elapsed 0.93 seconds, eta 2.13 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:31 pid 6149 | 32 of 49, 65.3% of Evaluate in test   , speed: 14.97 it/s, elapsed 1.94 seconds, eta 1.14 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:32 pid 6149 | 48 of 49, 98.0% of Evaluate in test   , speed: 15.01 it/s, elapsed 3 seconds, eta 0.07 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:32 pid 6149 | 49 of 49, 100.0% of Evaluate in test   , speed: 15.02 it/s, elapsed 3.12 seconds, eta 0 seconds, GPU RAM: 5.54 G/15.78 G
+2024-07-08 12:03:32 pid 6149 | finished Evaluate in test   . Total time: 3.12 seconds
+INFO:root:The running environment of this training is as follows:
++-------------+----------------+
+| Environment |     Usage      |
++=============+================+
+| CPU         |    15.40 %     |
++-------------+----------------+
+| GPU         | 5.54 G/15.78 G |
++-------------+----------------+
+| Memory      | 2.46 G/59.84 G |
++-------------+----------------+
+INFO:root:[1;33mbest valid [0m: OrderedDict([('recall@5', 0.0563), ('mrr@5', 0.0401), ('ndcg@5', 0.0441), ('hit@5', 0.0563), ('precision@5', 0.0113), ('valid_loss', 4.807887145451137)])

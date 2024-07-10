@@ -41,7 +41,7 @@
   "weight_decay": 1e-05,
   "max_grad_norm": 1.0,
   "loss_type": "InfoNCE-quick",
-  "epochs": 50,
+  "epochs": 2,
   "stopping_step": 20,
   "eval_args": {
     "split": {
