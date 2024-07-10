@@ -12,9 +12,10 @@ This repository contains the code for the paper Pablo Zivic, Hernán C. Vazquez 
 3. [Pretrain a model](#pretrain-a-model)
 4. [Use MLFLOW server to check metrics](#use-mlflow-server-to-check-metrics) 
 5. [Fine-tune a model](#fine-tune-a-model)
-6. [Recbole fork](#recbole-fork)
-7. [Contact](#contact)
-8. [Citation](#citation)
+6. [Sample logs](#sample-logs)
+7. [Recbole fork](#recbole-fork)
+8. [Contact](#contact)
+9. [Citation](#citation)
 
 ## Installing
 
@@ -32,6 +33,8 @@ To compute the scaled datasets from the [Amazon Product Data](https://cseweb.ucs
 ```commandline
 python scripts/scaling_datasets.py --step all
 ```
+
+Grab a coffe because this will take about 9 hours on a 8 core machine.
 
 ## Pretrain a model
 
@@ -79,6 +82,10 @@ python scripts/fine_tune.py -c confs/fine_tune/progressive.json -s amazon-beauty
 ```
 This fine tunes a model pretrained on `$PRETRAIN_DATASET` (e.g. amazon-1M) with the checkpoint `$CHECKPOINT_FNAME` 
 and the configuration file `$PRETRAIN_CONFIG` (e.g. `confs/config_dict_1M.json`)
+
+## Sample logs
+
+There are 3 log files on the `logs` folder so you can see the expected logs for computing datasets, pre-training, fine-tuning.
 
 ## Recbole fork
 There were some limitations on Recbole so we decide to fork it. We forked from the commit [`321bff8fc`](https://github.com/RUCAIBox/RecBole/commit/321bff8fc169415c908cd3e722d681b89bee5187) 
