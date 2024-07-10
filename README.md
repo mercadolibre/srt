@@ -1,7 +1,7 @@
 # Scaling Sequential Recommendation Models with Transformers
 
-This repository contains the code for the paper "Scaling Sequential Recommendation Models with Transformers" 
-published at The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval 
+This repository contains the code for the paper Pablo Zivic, Hernán C. Vazquez and Jorge Sanchez (2024) 
+"Scaling Sequential Recommendation Models with Transformers" published at The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval 
 (SIGIR 2024)
 
 
@@ -94,7 +94,6 @@ To summarize the changes are
 
 For comments, questions, or suggestions please contact [me](mailto:pablo.rzivic@mercadolibre.com). You can also reach me
 on twitter at [@ideasrapidas](https://twitter.com/ideasrapidas)
-
 
 ## Notice
 
