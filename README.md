@@ -111,5 +111,22 @@ The developers of this project are not responsible for any potential problems or
 This project is licensed under the terms of the MIT License. See LICENSE.
 
 ## Citation
-TODO
-
+If you use the code, data or conclusions of the paper, please cite us:
+```
+@inproceedings{10.1145/3626772.3657816,
+author = {Zivic, Pablo and Vazquez, Hernan and S\'{a}nchez, Jorge},
+title = {Scaling Sequential Recommendation Models with Transformers},
+year = {2024},
+isbn = {9798400704314},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626772.3657816},
+doi = {10.1145/3626772.3657816},
+booktitle = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {1567–1577},
+numpages = {11},
+keywords = {scaling laws, sequential recommendation, transfer learning, transformers},
+location = {Washington DC, USA},
+series = {SIGIR '24}
+}
+```
