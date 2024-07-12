@@ -1,8 +1,8 @@
 # Scaling Sequential Recommendation Models with Transformers
 
 This repository contains the code for the paper Pablo Zivic, Hernán C. Vazquez and Jorge Sanchez (2024) 
-"Scaling Sequential Recommendation Models with Transformers" published at The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval 
-(SIGIR 2024)
+["Scaling Sequential Recommendation Models with Transformers"](https://dl.acm.org/doi/10.1145/3626772.3657816) published 
+at The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024)
 
 
 ## Contents
